@@ -1,0 +1,8 @@
+{
+  "name": "biller-api",
+  "version": "0.0.1",
+  "description": "\"API for the biller app\"",
+  "main": "index.js",
+  "author": "Exponents",
+  "license": "MIT"
+}

@@ -1,0 +1,15 @@
+# Dependencies manager folder
+node_modules
+
+# Environment Variables
+.env
+.env.production
+.env.development
+.env.stagging
+
+# MAC Config
+.DS_Store
+
+# Code Editor Config
+.vscode
+.idea
