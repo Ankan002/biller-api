@@ -2,6 +2,7 @@ import express from "express";
 import { logger } from "utils/logger";
 import cors from "cors";
 import { origins } from "constants/origins";
+import cookieParser from "cookie-parser";
 
 export const startApp = () => {
 	const app = express();
@@ -14,6 +15,7 @@ export const startApp = () => {
 			origin: origins,
 		})
 	);
+	app.use(cookieParser());
 
 	app.get("/", (req, res) => {
 		return res.status(200).json({
