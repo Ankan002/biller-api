@@ -5,6 +5,8 @@ export const startApp = () => {
 	const app = express();
 	const PORT = process.env["PORT"];
 
+	app.use(express.json());
+
 	app.get("/", (req, res) => {
 		return res.status(200).json({
 			success: true,
