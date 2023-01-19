@@ -1,8 +1,10 @@
 import express from "express";
-import { logger } from "utils/logger";
 import cors from "cors";
-import { origins } from "constants/origins";
 import cookieParser from "cookie-parser";
+
+import { logger } from "utils/logger";
+import { origins } from "constants/origins";
+import { morganConfig } from "middlewares/morgan";
 
 export const startApp = () => {
 	const app = express();
@@ -16,6 +18,7 @@ export const startApp = () => {
 		})
 	);
 	app.use(cookieParser());
+	app.use(morganConfig);
 
 	app.get("/", (req, res) => {
 		return res.status(200).json({
