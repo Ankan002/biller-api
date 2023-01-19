@@ -13,3 +13,8 @@ node_modules
 # Code Editor Config
 .vscode
 .idea
+
+# Build Folders
+build
+dist
+out
